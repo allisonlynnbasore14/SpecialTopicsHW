@@ -20,6 +20,7 @@ def run_all_tests():
     # example with 5 nodes & 4 vehicles (quickest to run for initial testing)
     C,q,K,Q = read_file_type_A('data/A-n05-k04.xml')
     travel_cost, x = cvrp_ip(C,q,K,Q)
+    print(travel_cost)
     try:
         assert(travel_cost > 68 and travel_cost < 68.5)
     except AssertionError:
@@ -29,6 +30,7 @@ def run_all_tests():
     # example with 16 nodes and 3 vehicles
     C,q,K,Q = read_file_type_A('data/A-n016-k03.xml')
     travel_cost, x = cvrp_ip(C,q,K,Q)
+    print(travel_cost)
     try:
         assert(travel_cost > 278.5 and travel_cost < 279)
     except AssertionError:
@@ -38,6 +40,7 @@ def run_all_tests():
     # example with 16 nodes and 5 vehicles
     C,q,K,Q = read_file_type_A('data/A-n016-k05.xml')
     travel_cost, x = cvrp_ip(C,q,K,Q)
+    print(travel_cost)
     try:
         assert(travel_cost > 334.5 and travel_cost < 335.5)
     except:
@@ -47,6 +50,7 @@ def run_all_tests():
     # example with 13 nodes and 4 vehicles
     C,q,K,Q = read_file_type_C('data/C-n013-k04.xml')
     travel_cost, x = cvrp_ip(C,q,K,Q)
+    print(travel_cost)
     try:
         assert(travel_cost > 246.5 and travel_cost < 247.5)
     except AssertionError:
